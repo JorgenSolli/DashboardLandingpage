@@ -25,6 +25,17 @@
     <!-- action happens here -->
     <section id="mb-inner-container">
       <h3><small>Velkommen til ditt Dashboard, du!</small></h3>
+      <div class="btn-group m-b-15" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary btn-sm">Fra dato</button>
+        <button type="button" class="btn btn-secondary btn-sm">Til dato</button>
+        <button type="button" class="btn btn-secondary btn-sm">Hurtigvalg</button>
+      </div>
+
+      <div class="btn-group m-b-15 pull-right" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary btn-sm"><span class="fa fa-cog"></span> Gjør endringer</button>
+        <button type="button" class="btn btn-secondary btn-sm"><span class="fa fa-desktop"></span> Gå til fullskjerm</button>
+      </div>
+
       <div class="grid-stack">
         <div id="redBox" class="grid-stack-item"
             data-gs-x="0" data-gs-y="0"
@@ -97,7 +108,6 @@
     <button class="btn btn-success">Kontakt</button>
   </section>
 
-
   <script src="src/js/jquery-3.2.0.min.js"></script>
   <script src="src/js/jquery-ui.min.js"></script>
   <script src="src/js/lodash.min.js"></script>
@@ -109,51 +119,11 @@
 
   <script type="text/javascript">
     $(function () {
-        var options = {
-            cellHeight: 80,
-            verticalMargin: 10
-        };
-        $('.grid-stack').gridstack(options);
-
-        setTimeout(function() {
-          $("#redBox")
-            .attr('data-gs-width', 8)
-            .attr('data-gs-x', 0);
-          $("#greenBox")
-            .attr('data-gs-width', 8)
-            .attr('data-gs-x', 0)
-            .attr('data-gs-y', 1);
-          $("#graph")
-            .attr('data-gs-y', 2);
-        }, 1000);
-
-        setTimeout(function() {
-          $("#redBox")
-            .attr('data-gs-y', 3);
-          $("#greenBox")
-            .attr('data-gs-y', 2);
-          $("#graph")
-            .attr('data-gs-y', 0);
-        }, 2300);
-
-        setTimeout(function() {
-          $("#donut")
-            .attr('data-gs-y', 0)
-            .attr('data-gs-x', 8)
-            .attr('data-gs-height', 3);
-          $("#grayBox")
-            .attr('data-gs-y', 3)
-            .attr('data-gs-x', 0)
-            .attr('data-gs-width', 12);
-          $("#redBox")
-            .attr('data-gs-width', 4)
-            .attr('data-gs-x', 4)
-            .attr('data-gs-y', 2);
-          $("#greenBox")
-            .attr('data-gs-width', 4)
-            .attr('data-gs-x', 0)
-            .attr('data-gs-y', 2);
-        }, 3700);
+      var options = {
+          cellHeight: 80,
+          verticalMargin: 10
+      };
+      $('.grid-stack').gridstack(options);
     });
   </script>
 </body>

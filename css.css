@@ -99,10 +99,18 @@
 #banner .display-1 {
 	font-weight: 500;
 	text-align: right;
-	color: #fefefe
+	color: #fefefe;
 }
 
 #banner h3 {
 	text-align: right;
 	color: #fefefe;
+}
+
+.btn {
+	border-radius: 0;
+}
+
+.m-b-15 {
+	margin-bottom: 15px;
 }
