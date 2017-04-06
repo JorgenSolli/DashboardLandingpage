@@ -1,0 +1,108 @@
+.redBox {
+    background-color: #F67F6A;
+    border: 1px solid #F45d08;
+}
+
+.greenBox {
+    background-color: #87cbcc;
+    border: 1px solid #61a6a7;
+}
+
+.grayBox {
+	background-color: #B4ACAA;
+    border: 1px solid #928a88;
+}
+
+.border-right {
+	border-right: 1px solid white;
+}
+
+.topBox {
+	height: 140px
+}
+
+#mb-top, #mb-bottom {
+	max-width: 1285px;
+}
+
+#mb-right {
+	position: relative;
+	left: 171px;
+	width: 155px;
+	float: right;
+}
+
+#mb-left {
+	float: left;
+	width: 156px;
+	position: relative;
+	right: 1px;
+}
+
+#mb-container {
+	position: relative;
+	right: 75px;
+	margin-bottom: 25px;
+}
+
+#mb-inner-container {
+	width: 799px;
+	float: left;
+	position: relative;
+	left: 71px;
+	margin-top: 15px;
+}
+
+.widget-img {
+	width: 100%;
+}
+
+.row {
+	margin-bottom: 15px;
+}
+
+.mb-box {
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+.card-sm {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 12px;
+}
+
+.card {
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+.jumbotron {
+	border-radius: 0;
+}
+
+#banner {
+	background: url('img/bg.jpg')no-repeat; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 560px;
+}
+
+#banner .display-1 {
+	font-weight: 500;
+	text-align: right;
+	color: #fefefe
+}
+
+#banner h3 {
+	text-align: right;
+	color: #fefefe;
+}

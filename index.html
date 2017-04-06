@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>This is Dashboard</title>
+  <link 
+    rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css.css">
+  <link rel="stylesheet" href="src/css/gridstack.css">
+</head>
+<body>
+
+  <div id="banner" class="jumbotron">
+    <div class="container">
+      <h1 class="display-1">Bli klokere med Dashboard!</h1>
+      <h3><small>&nbsp;Få innsikt i din bedrift. Gjør smartere valg.</small></p>
+    </div>
+  </div>
+
+
+  <section id="mb-container" class="container">
+    <img id="mb-top" src="img/macbook/mb-top.png">
+    <img id="mb-left" src="img/macbook/mb-left.png">
+
+    <!-- action happens here -->
+    <section id="mb-inner-container">
+      <h3><small>Velkommen til ditt Dashboard, du!</small></h3>
+      <div class="grid-stack">
+        <div id="redBox" class="grid-stack-item"
+            data-gs-x="0" data-gs-y="0"
+            data-gs-width="4" data-gs-height="1">
+          <div class="grid-stack-item-content">
+            <div class="mb-box redBox text-center">
+              Ditt
+            </div>
+          </div>
+        </div>
+
+        <div id="greenBox" class="grid-stack-item"
+            data-gs-x="4" data-gs-y="0"
+            data-gs-width="4" data-gs-height="1">
+          <div class="grid-stack-item-content">
+            <div class="mb-box greenBox text-center">
+              eget
+            </div>
+          </div>
+        </div>
+
+        <div id="grayBox" class="grid-stack-item"
+            data-gs-x="8" data-gs-y="0"
+            data-gs-width="4" data-gs-height="1">
+          <div class="grid-stack-item-content">
+            <div class="mb-box grayBox text-center">
+              dashboard
+            </div>
+          </div>
+        </div>
+
+        <div id="graph" class="grid-stack-item"
+            data-gs-x="0" data-gs-y="1"
+            data-gs-width="8" data-gs-height="2">
+          <div class="grid-stack-item-content">
+            <div class="card">
+              <div class="card-header card-sm">
+                SIDEVISNINGER
+              </div>
+              <div class="card-block">
+                <img class="widget-img" src="img/widgets/graph.png">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="donut" class="grid-stack-item"
+            data-gs-x="8" data-gs-y="1"
+            data-gs-width="4" data-gs-height="2">
+          <div class="grid-stack-item-content">
+            <div class="card">
+              <div class="card-header card-sm">
+                SIDEVISNINGER
+              </div>
+              <div class="card-block">
+                <img class="widget-img" src="img/widgets/donut.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-primary">Spennende? les mer!</button>
+    </section>
+    <img id="mb-right" src="img/macbook/mb-right.png">
+    <img id="mb-bottom" src="img/macbook/mb-bottom.png">
+  </section>
+
+  <section class="jumbotron">
+    <button class="btn btn-success">Kontakt</button>
+  </section>
+
+
+  <script src="src/js/jquery-3.2.0.min.js"></script>
+  <script src="src/js/jquery-ui.min.js"></script>
+  <script src="src/js/lodash.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <script src="src/js/gridstack.all.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+        var options = {
+            cellHeight: 80,
+            verticalMargin: 10
+        };
+        $('.grid-stack').gridstack(options);
+
+        setTimeout(function() {
+          $("#redBox")
+            .attr('data-gs-width', 8)
+            .attr('data-gs-x', 0);
+          $("#greenBox")
+            .attr('data-gs-width', 8)
+            .attr('data-gs-x', 0)
+            .attr('data-gs-y', 1);
+          $("#graph")
+            .attr('data-gs-y', 2);
+        }, 1000);
+
+        setTimeout(function() {
+          $("#redBox")
+            .attr('data-gs-y', 3);
+          $("#greenBox")
+            .attr('data-gs-y', 2);
+          $("#graph")
+            .attr('data-gs-y', 0);
+        }, 2300);
+
+        setTimeout(function() {
+          $("#donut")
+            .attr('data-gs-y', 0)
+            .attr('data-gs-x', 8)
+            .attr('data-gs-height', 3);
+          $("#grayBox")
+            .attr('data-gs-y', 3)
+            .attr('data-gs-x', 0)
+            .attr('data-gs-width', 12);
+          $("#redBox")
+            .attr('data-gs-width', 4)
+            .attr('data-gs-x', 4)
+            .attr('data-gs-y', 2);
+          $("#greenBox")
+            .attr('data-gs-width', 4)
+            .attr('data-gs-x', 0)
+            .attr('data-gs-y', 2);
+        }, 3700);
+    });
+  </script>
+</body>
+</html>
