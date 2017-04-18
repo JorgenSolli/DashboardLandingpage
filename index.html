@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>This is Dashboard</title>
   <link 
     rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="src/css/gridstack.css">
 
-  <link rel="stylesheet" href="css.css">
+  <link rel="stylesheet" href="src/css/css.css">
   <link rel="stylesheet" href="src/css/fonts.css">
 </head>
 <body>
@@ -32,26 +34,36 @@
   </nav>
   <div class="triangle">
     <div id="banner" class="jumbotron">
-      <div class="container">
+      <div class="container hidden-lg-up">
+        <h1 class="display-3">Bli klokere med Dashboard!</h1>
+        <h3><small>Få innsikt i din bedrift. Gjør smartere valg.</small></h3>
+      </div>
+      <div class="container hidden-md-down">
         <h1 class="display-1">Bli klokere med Dashboard!</h1>
         <h3><small>Få innsikt i din bedrift. Gjør smartere valg.</small></h3>
       </div>
     </div>
 
-    <section id="mb-container" class="container clearfix">
-
-      <img id="mb-top" src="img/mb-full.png">
+    <div class="macbook">
+      <img class="hidden-lg-up" src="src/img/macbook.png">
+    </div>
+    <section id="mb-container" class="container clearfix hidden-md-down">
+      <div id="tryme">
+        <span class="black">Prøv meg!</span>
+        <img src="src/img/arrow.png">
+      </div>
+      <img id="mb-top" src="src/img/mb-full.png">
       
       <!-- action happens here -->
-      <section id="mb-inner-container">
-        <h3><small>Velkommen til ditt Dashboard, du!</small></h3>
-        <div class="btn-group m-b-15" role="group" aria-label="Basic example">
+      <section id="mb-inner-container" class="macScroll">
+        <h3 class="m-l-10"><small>Velkommen til ditt Dashboard, du!</small></h3>
+        <div class="btn-group m-b-15 m-l-10" role="group">
           <button type="button" class="btn btn-secondary btn-sm">Fra dato</button>
           <button type="button" class="btn btn-secondary btn-sm">Til dato</button>
           <button type="button" class="btn btn-secondary btn-sm">Hurtigvalg</button>
         </div>
 
-        <div class="btn-group m-b-15 pull-right" role="group" aria-label="Basic example">
+        <div class="btn-group m-b-15 m-r-10 pull-right" role="group">
           <button type="button" class="btn btn-secondary btn-sm"><span class="fa fa-cog"></span> Gjør endringer</button>
           <button type="button" class="btn btn-secondary btn-sm"><span class="fa fa-desktop"></span> Gå til fullskjerm</button>
         </div>
@@ -89,14 +101,14 @@
 
           <div id="graph" class="grid-stack-item"
               data-gs-x="0" data-gs-y="1"
-              data-gs-width="8" data-gs-height="3">
+              data-gs-width="7" data-gs-height="3">
             <div class="grid-stack-item-content">
               <div class="card">
                 <div class="card-header card-sm">
                   SIDEVISNINGER
                 </div>
                 <div class="card-block">
-                  <img class="widget-img" src="img/widgets/graph.png">
+                  <img class="widget-img" src="src/img/widgets/graph.png">
                 </div>
               </div>
             </div>
@@ -104,14 +116,99 @@
 
           <div id="donut" class="grid-stack-item"
               data-gs-x="8" data-gs-y="1"
-              data-gs-width="4" data-gs-height="3">
+              data-gs-width="5" data-gs-height="3">
             <div class="grid-stack-item-content">
               <div class="card">
                 <div class="card-header card-sm">
-                  SIDEVISNINGER
+                  HVOR KOMMER BRUKERNE FRA
                 </div>
                 <div class="card-block">
-                  <img class="widget-img" src="img/widgets/donut.png">
+                  <img class="widget-img" src="src/img/widgets/donut.png">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="oppdateringer" class="grid-stack-item"
+              data-gs-x="0" data-gs-y="4"
+              data-gs-width="7" data-gs-height="3">
+            <div class="grid-stack-item-content">
+              <div class="card">
+                <div class="card-header card-sm">
+                  OPPDATERINGER
+                </div>
+                <div class="card-block">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Navn</th>
+                        <th>Type</th>
+                        <th>Publisert</th>
+                        <th>Forfatter</th>
+                      </tr>
+                    </thead>
+                    <tbody class="tabledata">
+                        <tr>
+                          <td>
+                            <a target="_blank" href=""></a>
+                          </td>
+                          <td>
+                            
+                          </td>
+                          <td>
+                            
+                          </td>
+                          <td>
+                            <a href=""></a>
+                          </td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="siste-nytt" class="grid-stack-item"
+              data-gs-x="8" data-gs-y="4"
+              data-gs-width="5" data-gs-height="3">
+            <div class="grid-stack-item-content">
+              <div class="card">
+                <div class="card-header card-sm">
+                  SISTE NYTT FRA APLIA
+                </div>
+                <div class="card-block scrollable macScroll">
+                  <div class="apliaNewsData">
+                      <h5> <a href="https://www.aplia.no/om-teknologi-og-trender/oensker-du-flere-besoekende" target="_blank">Ønsker du flere besøkende? </a></h5>
+
+                      <p>Hvis du ønsker at flere skal finne nettstedet ditt, må du begynne med å lage det beste og mest nyttige innholdet.</p>
+                      <a href="https://www.aplia.no/om-teknologi-og-trender/oensker-du-flere-besoekende" target="_blank">Les mer</a>
+                      <hr>
+                  </div>
+
+                  <div class="apliaNewsData">
+                      <h5> <a href="https://www.aplia.no/om-teknologi-og-trender/fremtidens-betalingsloesning-er-mobil" target="_blank">Fremtidens betalingsløsning er mobil</a></h5>
+
+                      <p>Vi elsker LEGO! Når vi skulle lage en prototype for å teste betalinger i automater med mobilbetalingsappen mCASH, var det naturlig å bruke LEGO som testverktøy.</p>
+                      <a href="https://www.aplia.no/om-teknologi-og-trender/fremtidens-betalingsloesning-er-mobil" target="_blank">Les mer</a>
+                      <hr>
+                  </div>
+
+                  <div class="apliaNewsData">
+                      <h5> <a href="https://www.aplia.no/om-teknologi-og-trender/botene-kommer" target="_blank">Botene kommer</a></h5>
+
+                      <p>Det er ikke helt som de avanserte robotene fra sci-fi verden, men kunstig intelligens og boter, særlig chatboter, er på full fart inn i den digitale hverdagen vår.</p>
+                      <a href="https://www.aplia.no/om-teknologi-og-trender/botene-kommer" target="_blank">Les mer</a>
+                      <hr>
+                  </div>
+
+
+                  <div class="apliaNewsData">
+                      <h5> <a href="https://www.aplia.no/om-teknologi-og-trender/ville-du-gaatt-paa-date-med-nettsiden-din" target="_blank">Ville du gått på date med nettsiden din?</a></h5>
+
+                      <p>Hvordan ville det forholdet egentlig fungert om du gjorde det?</p>
+                      <a href="https://www.aplia.no/om-teknologi-og-trender/ville-du-gaatt-paa-date-med-nettsiden-din" target="_blank">Les mer</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -121,7 +218,7 @@
     </section>
   </div>
 
-  <div class="container" id="icon-rows">
+  <div class="container m-b-15" id="icon-rows">
     <div class="row">
       <div class="col">
         <span class="icon icon-line-graph"></span>
@@ -165,7 +262,48 @@
       </div>
     </div>
 
-    <a href="#" class="btn btn-outline-secondary btn-lg">Get it now!</a>
+    <a href="#contact" class="btn btn-outline-secondary btn-lg">
+      <span class="icon icon-rocket"></span>&nbsp;Get it now!
+    </a>
+  </div>
+
+  <div class="white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-12 col-xs-12 col-sm-12">
+          <img src="src/img/dashboard-skew.jpg">
+        </div>
+        <div class="col-lg-4 col-md-12 col-xs-12 col-sm-12">
+          <h4>Lorem? Ipsum!</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis ex nulla, semper feugiat dolor accumsan ut. Vivamus accumsan augue vitae justo euismod feugiat. Aliquam ut diam placerat, eleifend felis at, blandit dui. Nam nisl tellus, pharetra sit amet lorem vitae, lacinia aliquam lacus. Vivamus varius arcu eu dolor consequat, ac tincidunt nulla lobortis. Aenean pretium dictum lorem sit amet ultricies. Integer vehicula urna eget lacinia vestibulum. Sed vitae semper velit, quis egestas odio. Nulla lobortis pharetra felis, nec blandit sem vestibulum eget.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact">
+      <h2 class="text-center black bold">Ta i bruk dashboard med oss!</h2>
+      <h6 class="text-center black">Vil du ta i bruk eller få mer informasjon? Kontakt oss.</h6>
+      <div class="row m-t-25 coolFont">
+        <div class="col">
+          <h4 class="phone black pull-right">
+            <span class="icon icon-mobile m-r-10"></span>
+              928 47 444
+          </h4>
+        </div>
+        <div class="col">
+          <h4 class="mail black">
+            <span class="icon icon-email m-r-10"></span>
+            info@aplia.no
+          </h4>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <footer class="text-center">
+      <p>Dashboard for <a href="https://ez.no/">EZpublish</a>, av <a href="https://aplia.no">Aplia AS</a>.</p>
+    </footer>
   </div>
 
   <script src="src/js/jquery-3.2.0.min.js"></script>
