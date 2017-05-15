@@ -18,18 +18,28 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">
+        <img id="logo" src="src/img/aplia.svg">
+      </a>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="#om-dashboard">Om Dashboard <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#contact">Kontakt</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link" 
+              data-toggle="modal" 
+              data-target="#video">
+                Se Dashboard-film
+            </a>
           </li>
         </ul>
       </div>
+      <hr>
     </div>
   </nav>
   <div class="triangle">
@@ -49,7 +59,14 @@
     </div>
     <section id="mb-container" class="container clearfix hidden-md-down">
       <div id="tryme">
-        <span class="black">Prøv meg!</span>
+        <span
+          id="popover"
+          class="black" 
+          data-toggle="popover"  
+          data-placement="top"
+          data-content="Her har du muligheten til å få et inntrykk av hvordan Dashboard fungerer. Ved å flytte eller endre størrelse på elementer, skaper du ditt personlige Dashboard.">
+            Prøv meg! <i class="icon icon-help-with-circle"></i>
+        </span>
         <img src="src/img/arrow.png">
       </div>
       <img id="mb-top" src="src/img/mb-full.png">
@@ -73,8 +90,14 @@
               data-gs-x="0" data-gs-y="0"
               data-gs-width="4" data-gs-height="1">
             <div class="grid-stack-item-content">
-              <div class="mb-box redBox text-center">
-                Ditt
+              <div class="mb-box redBox gridpos row">
+                <div class="col-3 align-v text-center">
+                  <span class="icon icon-eye"></span>
+                </div>
+                <div class="col-9 align-v text-center">
+                  4185<br>
+                  SIDEVISNINGER
+                </div>
               </div>
             </div>
           </div>
@@ -83,8 +106,14 @@
               data-gs-x="4" data-gs-y="0"
               data-gs-width="4" data-gs-height="1">
             <div class="grid-stack-item-content">
-              <div class="mb-box greenBox text-center">
-                eget
+              <div class="mb-box greenBox row">
+                <div class="col-3 align-v text-center">
+                  <span class="icon icon-open-book"></span>
+                </div>
+                <div class="col-9 align-v text-center">
+                  3<br>
+                  SIDER PER ØKT
+                </div>
               </div>
             </div>
           </div>
@@ -93,8 +122,14 @@
               data-gs-x="8" data-gs-y="0"
               data-gs-width="4" data-gs-height="1">
             <div class="grid-stack-item-content">
-              <div class="mb-box grayBox text-center">
-                dashboard
+              <div class="mb-box grayBox row">
+                <div class="col-3 align-v text-center">
+                  <span class="icon icon-clipboard"></span>
+                </div>
+                <div class="col-9 align-v text-center">
+                  102<br>
+                  SURVEYSVAR
+                </div>
               </div>
             </div>
           </div>
@@ -222,48 +257,48 @@
     <div class="row">
       <div class="col">
         <span class="icon icon-line-graph"></span>
-        <p>Track your stuff</p>
+        <p>Få en bedre oversikt</p>
       </div>
 
       <div class="col">
         <span class="icon icon-merge"></span>
-        <p>All in one solution</p>
+        <p>Alt-i-ett løsning</p>
       </div>
 
       <div class="col">
-        <span class="icon icon-power-plug"></span>
-        <p>plug and play!</p>
+        <span class="icon icon-clock"></span>
+        <p>Data i sanntid</p>
       </div>
 
       <div class="col">
         <span class="icon icon-pie-chart"></span>
-        <p>All the pies you can eat</p>
+        <p>Grafiske visninger</p>
       </div>
     </div>
     <div class="row">
       <div class="col">
         <span class="icon icon-gauge"></span>
-        <p>Get up to speed with your data</p>
+        <p>Få fortgang!</p>
       </div>
 
       <div class="col">
         <span class="icon icon-hand"></span>
-        <p>Get hands on experience</p>
+        <p>Interaktivt dashboard</p>
       </div>
 
       <div class="col">
         <span class="icon icon-aircraft-take-off"></span>
-        <p>Get your company to new heights</p>
+        <p>Få ditt nettsted til nye høyder</p>
       </div>
       
       <div class="col">
         <span class="icon icon-tools"></span>
-        <p>Fully customizable dashboard for your needs</p>
+        <p>Fleksibelt</p>
       </div>
     </div>
 
     <a href="#contact" class="btn btn-outline-secondary btn-lg">
-      <span class="icon icon-rocket"></span>&nbsp;Get it now!
+      <span class="icon icon-rocket"></span>&nbsp;Skaff deg dashboard nå!
     </a>
   </div>
 
@@ -273,18 +308,23 @@
         <div class="col-lg-8 col-md-12 col-xs-12 col-sm-12">
           <img src="src/img/dashboard-skew.jpg">
         </div>
-        <div class="col-lg-4 col-md-12 col-xs-12 col-sm-12">
-          <h4>Lorem? Ipsum!</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis ex nulla, semper feugiat dolor accumsan ut. Vivamus accumsan augue vitae justo euismod feugiat. Aliquam ut diam placerat, eleifend felis at, blandit dui. Nam nisl tellus, pharetra sit amet lorem vitae, lacinia aliquam lacus. Vivamus varius arcu eu dolor consequat, ac tincidunt nulla lobortis. Aenean pretium dictum lorem sit amet ultricies. Integer vehicula urna eget lacinia vestibulum. Sed vitae semper velit, quis egestas odio. Nulla lobortis pharetra felis, nec blandit sem vestibulum eget.
+        <div id="om-dashboard" class="col-lg-4 col-md-12 col-xs-12 col-sm-12">
+          <h4>Få bedre oversikt over nettstedet ditt</h4>
+          <p> 
+            Dashboard har som formål å gi deg som webredaktør en bedre oversikt over aktivitet på ditt nettsted.<br>
+            Vi er vant til å ta i bruk tredjepartsløsninger som eksempelvis Google Analytics. I Dashboard har vi kombinert et utvalg av det vi mener er den mest essensielle informasjonen du trenger.<br>
+            Du har muligheten til å innhente informasjon om sidevisninger, konverteringer, surveysvar, dine siste oppdateringer, samt kundereisen til dine brukere. Deler av informasjonen er representert i grafer og modeller for best mulig oversikt.
           </p>
         </div>
       </div>
     </div>
 
     <div id="contact">
-      <h2 class="text-center black bold">Ta i bruk dashboard med oss!</h2>
-      <h6 class="text-center black">Vil du ta i bruk eller få mer informasjon? Kontakt oss.</h6>
+      <h2 class="text-center black bold">Oppgrader nå!</h2>
+      <h6 class="text-center black">
+
+        Ønsker du å oppgradere eller få mer informasjon? Kontakt oss.
+      </h6>
       <div class="row m-t-25 coolFont">
         <div class="col">
           <h4 class="phone black pull-right">
@@ -302,8 +342,16 @@
     </div>
     <hr>
     <footer class="text-center">
-      <p>Dashboard for <a href="https://ez.no/">EZpublish</a>, av <a href="https://aplia.no">Aplia AS</a>.</p>
+      <p>Dashboard for <a href="https://ez.no/">eZ Publish</a>, av <a href="https://aplia.no">Aplia AS</a>.</p>
     </footer>
+  </div>
+
+  <div id="video" class="modal fade">
+    <div class="modal-dialog modal-lg" role="document">
+      <iframe width="100%" height="500" 
+        src="https://www.youtube.com/embed/XGSy3_Czz8k">
+      </iframe>
+    </div>
   </div>
 
   <script src="src/js/jquery-3.2.0.min.js"></script>
@@ -325,6 +373,12 @@
       $('.grid-stack').gridstack(options);
 
     });
+
+    $(function () {
+      $('#popover').popover({
+        container: 'body'
+      })
+    })
   </script>
 </body>
 </html>

@@ -10,6 +10,10 @@
 	background-color: transparent;
 }
 
+#logo {
+  max-height: 40px;
+}
+
 .row {
   width: 100%;
 }
@@ -54,19 +58,48 @@ body {
   font-family: 'Graphik-Medium', Arial, Helvetica, sans-serif;
 }
 
+#redBox, #greenBox, #grayBox {
+  color: white;
+  cursor: pointer;
+}
+
+#redBox .col-3, #greenBox .col-3, #grayBox .col-3 {
+  border-right: 1px solid white;
+  height: 25px;
+}
+
+#redBox .col-9, #greenBox .col-9, #grayBox .col-9 {
+  height: 30px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.align-v {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.gridpos {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
 .redBox {
-    background-color: #F67F6A;
-    border: 1px solid #F45d08;
+  background-color: #F67F6A;
+  border: 1px solid #F45d08;
 }
 
 .greenBox {
-    background-color: #87cbcc;
-    border: 1px solid #61a6a7;
+  background-color: #87cbcc;
+  border: 1px solid #61a6a7;
 }
 
 .grayBox {
 	background-color: #B4ACAA;
-    border: 1px solid #928a88;
+  border: 1px solid #928a88;
 }
 
 .border-right {
@@ -216,6 +249,17 @@ body {
   margin-top: 50px;
 }
 
+#popover {
+  cursor: pointer;
+}
+#popover i {
+  color: #0275d8;
+}
+
+#video {
+  overflow-y: hidden;
+}
+
 #tryme {
   position: absolute;
   top: -6px;
@@ -230,7 +274,7 @@ body {
 #tryme span {
   position: relative;
   bottom: 69px;
-  left: 19px;
+  left: 5px;
   font-size: 23px;
 }
 
