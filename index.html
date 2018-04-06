@@ -4,343 +4,360 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>This is Dashboard</title>
-  <link 
-    rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="src/css/gridstack.css">
 
-  <link rel="stylesheet" href="src/css/css.css">
-  <link rel="stylesheet" href="src/css/fonts.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.0/dist/semantic.min.css">
+  <link rel="stylesheet" href="src/css/fa-brands.min.css">
+  <link rel="stylesheet" href="src/css/fa-light.min.css">
+  <link rel="stylesheet" href="src/css/fa-solid.min.css">
+  <link rel="stylesheet" href="src/css/fontawesome.min.css">
+  <link rel="stylesheet" href="src/css/app.css">
 </head>
 <body>
-  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-    <div class="container">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="#">
-        <img id="logo" src="src/img/aplia.svg">
-      </a>
+    <nav class="ui container">
+        <div class="ui secondary menu">
+            <img id="logo" src="src/img/aplia.svg">
+            <a href="#om-dashboard" class="item">Om Dashboard</a>
+            <a href="#contact" class="item">Kontakt</a>
+        </div>
+    </nav>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#om-dashboard">Om Dashboard <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Kontakt</a>
-          </li>
-          <!--
-          <li class="nav-item">
-            <a href="" class="nav-link" 
-              data-toggle="modal" 
-              data-target="#video">
-                Se Dashboard-film
-            </a>
-          </li>
-          -->
-        </ul>
-      </div>
-      <hr>
-    </div>
-  </nav>
-  <div class="triangle">
-    <div id="banner" class="jumbotron">
-      <div class="container hidden-lg-up">
-        <h1 class="display-3">Bli klokere med Dashboard!</h1>
-        <h3><small>Få innsikt i din bedrift. Gjør smartere valg.</small></h3>
-      </div>
-      <div class="container hidden-md-down">
-        <h1 class="display-1">Bli klokere med Dashboard!</h1>
-        <h3><small>Få innsikt i din bedrift. Gjør smartere valg.</small></h3>
-      </div>
-    </div>
-
-    <div class="macbook">
-      <img class="hidden-lg-up" src="src/img/macbook.png">
-    </div>
-    <section id="mb-container" class="container clearfix hidden-md-down">
-      <div id="tryme">
-        <span
-          id="popover"
-          class="black" 
-          data-toggle="popover"  
-          data-placement="top"
-          data-content="Her har du muligheten til å få et inntrykk av hvordan Dashboard fungerer. Ved å flytte eller endre størrelse på elementer, skaper du ditt personlige Dashboard.">
-            Prøv meg! <i class="icon icon-help-with-circle"></i>
-        </span>
-        <img src="src/img/arrow.png">
-      </div>
-      <img id="mb-top" src="src/img/mb-full.png">
-      
-      <!-- action happens here -->
-      <section id="mb-inner-container" class="macScroll">
-        <h3 class="m-l-10"><small>Velkommen til ditt Dashboard, du!</small></h3>
-        <div class="btn-group m-b-15 m-l-10" role="group">
-          <button type="button" class="btn btn-secondary btn-sm">Fra dato</button>
-          <button type="button" class="btn btn-secondary btn-sm">Til dato</button>
-          <button type="button" class="btn btn-secondary btn-sm">Hurtigvalg</button>
+    <div class="ui container triangle">
+        <div id="banner" class="jumbotron">
+            <div class="container hidden-lg-up">
+                <h1 class="display-3 ui header coolFont bold">
+                    Bli klokere med Dashboard!
+                    <div class="sub header">Få innsikt i din bedrift. Gjør smartere valg.</div>
+                </h1>
+            </div>
+            <div class="container hidden-md-down coolFont bold">
+                <h1 class="display-1 ui header">
+                    Bli klokere med Dashboard!
+                    <div class="sub header">Få innsikt i din bedrift. Gjør smartere valg.</div>
+                </h1>
+            </div>
         </div>
 
-        <div class="btn-group m-b-15 m-r-10 pull-right" role="group">
-          <button type="button" class="btn btn-secondary btn-sm"><span class="fa fa-cog"></span> Gjør endringer</button>
-          <button type="button" class="btn btn-secondary btn-sm"><span class="fa fa-desktop"></span> Gå til fullskjerm</button>
+        <div class="macbook m-t-25">
+            <img class="hidden-lg-up" src="src/img/macbook.png">
         </div>
 
-        <div class="grid-stack">
-          <div id="redBox" class="grid-stack-item"
-              data-gs-x="0" data-gs-y="0"
-              data-gs-width="4" data-gs-height="1">
-            <div class="grid-stack-item-content">
-              <div class="mb-box redBox gridpos row">
-                <div class="col-3 align-v text-center">
-                  <span class="icon icon-eye"></span>
+        <section id="mb-container" class="container clearfix hidden-md-down">
+
+            <img id="mb-top" src="src/img/mb-full.png">
+
+            <!-- action happens here -->
+            <section id="mb-inner-container" class="macScroll">
+                <h2><small>Velkommen til ditt dashboard!</small></h2>
+                <div class="ui form">
+                    <div class="fields">
+                        <div class="field">
+                            <label>Dato fra</label>
+                            <div class="ui calendar">
+                                <div class="ui small input left icon">
+                                    <i class="calendar icon"></i>
+                                    <input id="start-date" type="text" placeholder="Dato fra">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Dato til</label>
+                            <div class="ui calendar">
+                                <div class="ui small input left icon">
+                                    <i class="calendar icon"></i>
+                                    <input id="end-date" type="text" placeholder="Dato til">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="quickDatePop" class="field ui small floating dropdown labeled icon button">
+                            <i class="fa-calendar-check icon"></i>
+                            <div class="text">Hurtigvalg</div>
+                            <div class="menu quickDate">
+                                <div id="data-thisWeek" class="item">Denne uken</div>
+                                <div id="data-lastWeek" class="item">Forrige uke</div>
+                                <div id="data-thisMonth" class="item">Denne måneden</div>
+                                <div id="data-lastMonth" class="item">Forrige måned</div>
+                                <div id="data-thisYear" class="item">I år</div>
+                                <div id="data-lastYear" class="item">I fjor</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-9 align-v text-center">
-                  4185<br>
-                  SIDEVISNINGER
+
+                <div class="ui three column grid top-row">
+                    <div class="column">
+                        <div class="ui segment">
+                            <div class="redBox topbox ui grid">
+                                <div class="five wide column">
+                                    <i class="fal fa-eye"></i>
+                                </div>
+                                <div class="eleven wide column">
+                                    <span class="data">4185</span>
+                                    <br>
+                                    <span class="title">SIDEVISNINGER</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui segment">
+                            <div class="greenBox topbox ui grid">
+                                <div class="five wide column">
+                                    <i class="fal fa-clone"></i>
+                                </div>
+                                <div class="eleven wide column">
+                                    <span class="data">3</span>
+                                    <br>
+                                    <span class="title">SIDER PER ØKT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui segment">
+                            <div class="grayBox topbox ui grid">
+                                <div class="five wide column">
+                                    <i class="fal fa-paper-plane"></i>
+                                </div>
+                                <div class="eleven wide column">
+                                    <span class="data">102</span>
+                                    <br>
+                                    <span class="title">SURVEYSVAR</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
 
-          <div id="greenBox" class="grid-stack-item"
-              data-gs-x="4" data-gs-y="0"
-              data-gs-width="4" data-gs-height="1">
-            <div class="grid-stack-item-content">
-              <div class="mb-box greenBox row">
-                <div class="col-3 align-v text-center">
-                  <span class="icon icon-open-book"></span>
+                <div class="ui grid">
+                    <div class="ten wide column">
+                        <div id="graph">
+                            <div class="ui card">
+                                <div class="content">
+                                    <div class="header">
+                                        Sidevisninger
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <img class="widget-img" src="src/img/widgets/graph.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="six wide column">
+                        <div id="donut">
+                            <div class="ui card">
+                                <div class="content">
+                                    <div class="header">
+                                        Hvor kommer brukerne fra
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <img class="widget-img" src="src/img/widgets/donut.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-9 align-v text-center">
-                  3<br>
-                  SIDER PER ØKT
+
+                <div class="ui grid">
+                    <div class="ten wide column">
+                        <div id="oppdateringer">
+                            <div class="ui card">
+                                <div class="content">
+                                    <div class="header">
+                                        Oppdateringer
+                                    </div>
+                                </div>
+                                <div class="content with-table">
+                                    <table class="ui single line structured striped table">
+                                        <thead>
+                                            <tr>
+                                                <th>Navn</th>
+                                                <th>Type</th>
+                                                <th>Publisert</th>
+                                                <th>Forfatter</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tabledata">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="six wide column">
+                        <div id="siste-nytt">
+                            <div class="ui card">
+                                <div class="content">
+                                    <div class="header">
+                                        Siste nytt fra Aplia
+                                    </div>
+                                </div>
+                                <div class="content scrollable macScroll" style="max-height: 100px;">
+                                    <div class="apliaNewsData">
+                                        <h5>
+                                            <a href="https://www.aplia.no/om-teknologi-og-trender/oensker-du-flere-besoekende" target="_blank">Ønsker du flere besøkende? </a>
+                                        </h5>
+
+                                        <p>Hvis du ønsker at flere skal finne nettstedet ditt, må du begynne med å lage det beste og mest nyttige innholdet.</p>
+                                        <a href="https://www.aplia.no/om-teknologi-og-trender/oensker-du-flere-besoekende" target="_blank">Les mer</a>
+                                        <hr>
+                                    </div>
+
+                                    <div class="apliaNewsData">
+                                        <h5>
+                                            <a href="https://www.aplia.no/om-teknologi-og-trender/fremtidens-betalingsloesning-er-mobil" target="_blank">Fremtidens betalingsløsning er mobil</a>
+                                        </h5>
+
+                                        <p>Vi elsker LEGO! Når vi skulle lage en prototype for å teste betalinger i automater med mobilbetalingsappen mCASH, var det naturlig å bruke LEGO som testverktøy.</p>
+                                        <a href="https://www.aplia.no/om-teknologi-og-trender/fremtidens-betalingsloesning-er-mobil" target="_blank">Les mer</a>
+                                        <hr>
+                                    </div>
+
+                                    <div class="apliaNewsData">
+                                        <h5>
+                                            <a href="https://www.aplia.no/om-teknologi-og-trender/botene-kommer" target="_blank">Botene kommer</a>
+                                        </h5>
+
+                                        <p>Det er ikke helt som de avanserte robotene fra sci-fi verden, men kunstig intelligens og boter, særlig chatboter, er på full fart inn i den digitale hverdagen vår.</p>
+                                        <a href="https://www.aplia.no/om-teknologi-og-trender/botene-kommer" target="_blank">Les mer</a>
+                                        <hr>
+                                    </div>
+
+
+                                    <div class="apliaNewsData">
+                                        <h5>
+                                            <a href="https://www.aplia.no/om-teknologi-og-trender/ville-du-gaatt-paa-date-med-nettsiden-din" target="_blank">Ville du gått på date med nettsiden din?</a>
+                                        </h5>
+
+                                        <p>Hvordan ville det forholdet egentlig fungert om du gjorde det?</p>
+                                        <a href="https://www.aplia.no/om-teknologi-og-trender/ville-du-gaatt-paa-date-med-nettsiden-din" target="_blank">Les mer</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
 
-          <div id="grayBox" class="grid-stack-item"
-              data-gs-x="8" data-gs-y="0"
-              data-gs-width="4" data-gs-height="1">
-            <div class="grid-stack-item-content">
-              <div class="mb-box grayBox row">
-                <div class="col-3 align-v text-center">
-                  <span class="icon icon-clipboard"></span>
+                <div class="ui grid">
+                    <div class="column">
+                        <div id="utkast">
+                            <div class="ui card">
+                                <div class="content">
+                                    <div class="header">
+                                        Utkast
+                                    </div>
+                                </div>
+                                <div class="content with-table">
+                                    <table class="ui single line structured striped table">
+                                        <thead>
+                                            <tr>
+                                                <th>Navn</th>
+                                                <th>Type</th>
+                                                <th>Versjon</th>
+                                                <th>Endringstidspunkt</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tabledata">
+                                            <tr>
+                                                <td>Fokusfelt</td>
+                                                <td>Fokus område</td>
+                                                <td>4</td>
+                                                <td>05.03.2018 13:24</td>
+                                                <td><i class="fal fa-pen"></i></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-9 align-v text-center">
-                  102<br>
-                  SURVEYSVAR
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div id="graph" class="grid-stack-item"
-              data-gs-x="0" data-gs-y="1"
-              data-gs-width="7" data-gs-height="3">
-            <div class="grid-stack-item-content">
-              <div class="card">
-                <div class="card-header card-sm">
-                  SIDEVISNINGER
-                </div>
-                <div class="card-block">
-                  <img class="widget-img" src="src/img/widgets/graph.png">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div id="donut" class="grid-stack-item"
-              data-gs-x="8" data-gs-y="1"
-              data-gs-width="5" data-gs-height="3">
-            <div class="grid-stack-item-content">
-              <div class="card">
-                <div class="card-header card-sm">
-                  HVOR KOMMER BRUKERNE FRA
-                </div>
-                <div class="card-block">
-                  <img class="widget-img" src="src/img/widgets/donut.png">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div id="oppdateringer" class="grid-stack-item"
-              data-gs-x="0" data-gs-y="4"
-              data-gs-width="7" data-gs-height="3">
-            <div class="grid-stack-item-content">
-              <div class="card">
-                <div class="card-header card-sm">
-                  OPPDATERINGER
-                </div>
-                <div class="card-block">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th>Navn</th>
-                        <th>Type</th>
-                        <th>Publisert</th>
-                        <th>Forfatter</th>
-                      </tr>
-                    </thead>
-                    <tbody class="tabledata">
-                        <tr>
-                          <td>
-                            <a target="_blank" href=""></a>
-                          </td>
-                          <td>
-                            
-                          </td>
-                          <td>
-                            
-                          </td>
-                          <td>
-                            <a href=""></a>
-                          </td>
-                        </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div id="siste-nytt" class="grid-stack-item"
-              data-gs-x="8" data-gs-y="4"
-              data-gs-width="5" data-gs-height="3">
-            <div class="grid-stack-item-content">
-              <div class="card">
-                <div class="card-header card-sm">
-                  SISTE NYTT FRA APLIA
-                </div>
-                <div class="card-block scrollable macScroll">
-                  <div class="apliaNewsData">
-                      <h5> <a href="https://www.aplia.no/om-teknologi-og-trender/oensker-du-flere-besoekende" target="_blank">Ønsker du flere besøkende? </a></h5>
-
-                      <p>Hvis du ønsker at flere skal finne nettstedet ditt, må du begynne med å lage det beste og mest nyttige innholdet.</p>
-                      <a href="https://www.aplia.no/om-teknologi-og-trender/oensker-du-flere-besoekende" target="_blank">Les mer</a>
-                      <hr>
-                  </div>
-
-                  <div class="apliaNewsData">
-                      <h5> <a href="https://www.aplia.no/om-teknologi-og-trender/fremtidens-betalingsloesning-er-mobil" target="_blank">Fremtidens betalingsløsning er mobil</a></h5>
-
-                      <p>Vi elsker LEGO! Når vi skulle lage en prototype for å teste betalinger i automater med mobilbetalingsappen mCASH, var det naturlig å bruke LEGO som testverktøy.</p>
-                      <a href="https://www.aplia.no/om-teknologi-og-trender/fremtidens-betalingsloesning-er-mobil" target="_blank">Les mer</a>
-                      <hr>
-                  </div>
-
-                  <div class="apliaNewsData">
-                      <h5> <a href="https://www.aplia.no/om-teknologi-og-trender/botene-kommer" target="_blank">Botene kommer</a></h5>
-
-                      <p>Det er ikke helt som de avanserte robotene fra sci-fi verden, men kunstig intelligens og boter, særlig chatboter, er på full fart inn i den digitale hverdagen vår.</p>
-                      <a href="https://www.aplia.no/om-teknologi-og-trender/botene-kommer" target="_blank">Les mer</a>
-                      <hr>
-                  </div>
-
-
-                  <div class="apliaNewsData">
-                      <h5> <a href="https://www.aplia.no/om-teknologi-og-trender/ville-du-gaatt-paa-date-med-nettsiden-din" target="_blank">Ville du gått på date med nettsiden din?</a></h5>
-
-                      <p>Hvordan ville det forholdet egentlig fungert om du gjorde det?</p>
-                      <a href="https://www.aplia.no/om-teknologi-og-trender/ville-du-gaatt-paa-date-med-nettsiden-din" target="_blank">Les mer</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </section>
-  </div>
-
-  <div class="container m-b-15" id="icon-rows">
-    <div class="row">
-      <div class="col">
-        <span class="icon icon-line-graph"></span>
-        <p>Få en bedre oversikt</p>
-      </div>
-
-      <div class="col">
-        <span class="icon icon-merge"></span>
-        <p>Alt-i-ett løsning</p>
-      </div>
-
-      <div class="col">
-        <span class="icon icon-clock"></span>
-        <p>Data i sanntid</p>
-      </div>
-
-      <div class="col">
-        <span class="icon icon-pie-chart"></span>
-        <p>Grafiske visninger</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <span class="icon icon-gauge"></span>
-        <p>Få fortgang!</p>
-      </div>
-
-      <div class="col">
-        <span class="icon icon-hand"></span>
-        <p>Interaktivt dashboard</p>
-      </div>
-
-      <div class="col">
-        <span class="icon icon-aircraft-take-off"></span>
-        <p>Få ditt nettsted til nye høyder</p>
-      </div>
-      
-      <div class="col">
-        <span class="icon icon-tools"></span>
-        <p>Fleksibelt</p>
-      </div>
+            </section>
+        </section>
     </div>
 
-    <a href="#contact" class="btn btn-outline-secondary btn-lg">
-      <span class="icon icon-rocket"></span>&nbsp;Skaff deg dashboard nå!
-    </a>
-  </div>
+    <div class="ui container m-b-15" id="icon-rows">
+        <div class="ui equal width grid">
+            <div class="column with-icon">
+                <i class="fal fa-chart-line"></i>
+                <p>Få en bedre oversikt</p>
+            </div>
 
-  <div class="white">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-12 col-xs-12 col-sm-12">
-          <img src="src/img/dashboard-skew.jpg">
+            <div class="column with-icon">
+                <i class="fal fa-code-merge"></i>
+                <p>Alt-i-ett løsning</p>
+            </div>
+
+            <div class="column with-icon">
+                <i class="fal fa-clock"></i>
+                <p>Data i sanntid</p>
+            </div>
         </div>
-        <div id="om-dashboard" class="col-lg-4 col-md-12 col-xs-12 col-sm-12">
-          <h4>Få bedre oversikt over nettstedet ditt</h4>
-          <p> 
-            Dashboard har som formål å gi deg som webredaktør en bedre oversikt over aktivitet på ditt nettsted.<br>
-            Vi er vant til å ta i bruk tredjepartsløsninger som eksempelvis Google Analytics. I Dashboard har vi kombinert et utvalg av det vi mener er den mest essensielle informasjonen du trenger.<br>
-            Du har muligheten til å innhente informasjon om sidevisninger, konverteringer, surveysvar, dine siste oppdateringer, samt kundereisen til dine brukere. Deler av informasjonen er representert i grafer og modeller for best mulig oversikt.
-          </p>
+        <div class="ui equal width grid">
+            <div class="column with-icon">
+                <i class="fal fa-chart-pie"></i>
+                <p>Grafiske visninger</p>
+            </div>
+            <div class="column with-icon">
+                <i class="fal fa-tachometer"></i>
+                <p>Få fortgang!</p>
+            </div>
+
+            <div class="column with-icon">
+                <i class="fal fa-fighter-jet"></i>
+                <p>Få ditt nettsted til nye høyder</p>
+            </div>
         </div>
-      </div>
+        <div class="ui grid">
+            <div class="column">
+                <a href="#contact" class="ui button large btn-outline-secondary">
+                    <i class="fas fa-rocket"></i>
+                    Skaff deg dashboard nå!
+                </a>
+            </div>
+        </div>
     </div>
 
-    <div id="contact">
-      <h2 class="text-center black bold">Oppgrader nå!</h2>
-      <h6 class="text-center black">
+    <div class="white">
+        <div class="ui container">
+            <div class="ui stackable grid">
+                <div class="column ten wide">
+                    <img src="src/img/dashboard-skew.jpg">
+                </div>
+                <div id="om-dashboard" class="column six wide">
+                    <h2>Få bedre oversikt over nettstedet ditt</h2>
+                    <p>
+                        Dashboard har som formål å gi deg som webredaktør en bedre oversikt over aktivitet på ditt nettsted.<br>
+                        Vi er vant til å ta i bruk tredjepartsløsninger som eksempelvis Google Analytics. I Dashboard har vi kombinert et utvalg av det vi mener er den mest essensielle informasjonen du trenger.<br>
+                        Du har muligheten til å innhente informasjon om sidevisninger, konverteringer, surveysvar, dine siste oppdateringer, samt kundereisen til dine brukere. Deler av informasjonen er representert i grafer og modeller for best mulig oversikt.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-        Ønsker du å oppgradere eller få mer informasjon? Kontakt oss.
-      </h6>
-      <div class="row m-t-25 coolFont">
-        <div class="col">
-          <h4 class="phone black pull-right">
-            <span class="icon icon-mobile m-r-10"></span>
-              928 47 444
-          </h4>
+    <div id="contact" class="ui container">
+        <h2 class="h1 text-center black bold">Oppgrader nå!</h2>
+        <p class="text-center black">
+            Ønsker du å oppgradere eller få mer informasjon? Kontakt oss.
+        </p>
+        <div class="ui stackable equal width grid m-t-25 coolFont">
+            <div class="column">
+                <h2 class="phone black">
+                    <i class="fal fa-mobile m-r-10"></i>
+                    928 47 444
+                </h2>
+            </div>
+            <div class="column">
+                <h2 class="mail black">
+                    <i class="fal fa-at m-r-10"></i>
+                    info@aplia.no
+                </h2>
+            </div>
         </div>
-        <div class="col">
-          <h4 class="mail black">
-            <span class="icon icon-email m-r-10"></span>
-            info@aplia.no
-          </h4>
-        </div>
-      </div>
     </div>
     <hr>
     <footer class="text-center">
@@ -348,39 +365,10 @@
     </footer>
   </div>
 
-  <div id="video" class="modal fade">
-    <div class="modal-dialog modal-lg" role="document">
-      <iframe width="100%" height="500" 
-        src="https://www.youtube.com/embed/XGSy3_Czz8k">
-      </iframe>
-    </div>
-  </div>
-
-  <script src="src/js/jquery-3.2.0.min.js"></script>
-  <script src="src/js/jquery-ui.min.js"></script>
-  <script src="src/js/lodash.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
-  <script src="src/js/gridstack.all.js"></script>
-
-  <script type="text/javascript">
-    $(function () {
-      var options = {
-          cellHeight: 40,
-          verticalMargin: 10,
-          maxHeight: '280px'
-      };
-      $('.grid-stack').gridstack(options);
-
-    });
-
-    $(function () {
-      $('#popover').popover({
-        container: 'body'
-      })
-    })
-  </script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.0/dist/semantic.min.js"></script>
 </body>
 </html>
